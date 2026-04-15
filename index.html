@@ -116,6 +116,87 @@
             </div>
         </div>
     </section>
+    
+        <section id="status-unit" class="py-20 px-6 bg-black/50 border-y border-white/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-3xl font-black italic text-blue-500 gaming-font uppercase tracking-widest">LIVE UNIT STATUS</h3>
+                <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-2">Cek ketersediaan meja secara real-time</p>
+            </div>
+
+            <div id="unit-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                </div>
+
+            <div class="mt-12 flex flex-wrap justify-center gap-6 text-[10px] font-black tracking-widest uppercase">
+                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span> READY</div>
+                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-orange-500 rounded-full"></span> BOOKED</div>
+                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600 rounded-full"></span> MABAR</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+        // Pakai config yang sama dengan admin.html
+        const firebaseConfig = {
+            apiKey: "AIzaSyAfPZ6d4nmCfgkV907xNpg1c2ORT_zUhGM",
+            authDomain: "warriorps-2f4d9.firebaseapp.com",
+            databaseURL: "https://warriorps-2f4d9-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "warriorps-2f4d9",
+            storageBucket: "warriorps-2f4d9.firebasestorage.app",
+            messagingSenderId: "502639514749",
+            appId: "1:502639514749:web:877e45a490bd9d52b7cd14"
+        };
+        
+        if (!firebase.apps.length) {
+            firebase.initializeApp(firebaseConfig);
+        }
+        const db = firebase.database();
+
+        const units = [
+            { id: 1, type: "Besar" }, { id: 2, type: "Besar" }, { id: 3, type: "Kecil" },
+            { id: 4, type: "Kecil" }, { id: 5, type: "Kecil" }, { id: 6, type: "Besar" },
+            { id: 7, type: "Kecil" }, { id: 8, type: "Kecil" }, { id: 9, type: "Kecil" },
+            { id: 10, type: "Besar" }, { id: 11, type: "Besar" }
+        ];
+
+        const grid = document.getElementById('unit-grid');
+
+        units.forEach(unit => {
+            const card = document.createElement('div');
+            card.id = `unit-card-${unit.id}`;
+            card.className = "bg-gray-800/30 border border-white/5 p-4 rounded-2xl text-center transition-all duration-500";
+            card.innerHTML = `
+                <p class="text-[9px] font-bold text-gray-500 uppercase mb-1">UNIT ${unit.id}</p>
+                <h4 class="text-lg font-black italic gaming-font">${unit.type}</h4>
+                <p id="status-text-${unit.id}" class="text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest border border-white/5 italic">LOADING</p>
+            `;
+            grid.appendChild(card);
+
+            // MENDENGARKAN PERUBAHAN DARI SAKLAR ADMIN
+            db.ref('warrior_status/unit_' + unit.id).on('value', (snapshot) => {
+                const data = snapshot.val();
+                const status = (data && data.status) ? data.status.toLowerCase() : 'ready';
+                
+                const cardEl = document.getElementById(`unit-card-${unit.id}`);
+                const textEl = document.getElementById(`status-text-${unit.id}`);
+                
+                textEl.innerText = status === 'full' ? 'MABAR' : (status === 'booked' ? 'BOOKED' : 'READY');
+
+                if (status === 'ready') {
+                    cardEl.className = "bg-green-500/5 border border-green-500/20 p-4 rounded-2xl text-center shadow-[0_0_15px_rgba(34,197,94,0.1)]";
+                    textEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest bg-green-500 text-white shadow-lg";
+                } else if (status === 'booked') {
+                    cardEl.className = "bg-orange-500/5 border border-orange-500/20 p-4 rounded-2xl text-center shadow-[0_0_15px_rgba(249,115,22,0.1)]";
+                    textEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest bg-orange-500 text-white shadow-lg";
+                } else {
+                    cardEl.className = "bg-red-500/5 border border-red-500/20 p-4 rounded-2xl text-center shadow-[0_0_15px_rgba(239,68,68,0.1)]";
+                    textEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest bg-red-600 text-white shadow-lg";
+                }
+            });
+        });
+    </script>
 
     <footer id="contact" class="bg-gray-900 py-16 text-center border-t border-gray-800">
         <h4 class="text-xl font-black text-yellow-500 mb-2 uppercase italic">Warrior PS Jombang</h4>
