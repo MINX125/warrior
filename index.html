@@ -23,7 +23,7 @@
             <a href="#gallery" class="hover:text-blue-400 transition">Galeri</a>
             <a href="#coffee" class="hover:text-blue-400 transition">Coffee</a>
         </div>
-        <a href="https://wa.me/6285859780006?text=Halo%20Warrior%20PS%2C%20mau%20booking%20tempat%20dong" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 font-bold text-sm transition flex items-center gap-2">
+        <a href="https://wa.me/6285859780006" target="_blank" class="bg-green-600 px-4 py-2 rounded-lg hover:bg-green-700 font-bold text-sm transition flex items-center gap-2">
             <i class="fab fa-whatsapp"></i> BOOKING
         </a>
     </nav>
@@ -31,9 +31,6 @@
     <header class="min-h-[50vh] flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4 relative">
         <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">PLAY LIKE A <span class="text-blue-500">WARRIOR.</span></h2>
         <p class="text-gray-400 text-lg max-w-2xl mb-8 mx-auto font-medium">Rental PS Harga Rakyat, Fasilitas Ningrat. Ceweng Gang 4, Jombang.</p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#status-unit" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-sm hover:bg-blue-500 transition shadow-lg">CEK UNIT</a>
-        </div>
     </header>
 
     <section id="status-unit" class="py-20 px-6 bg-black/50 border-y border-white/5">
@@ -43,7 +40,7 @@
                 <p id="sub-title-unit" class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-2 italic">Real-time Management System</p>
             </div>
 
-            <div id="pesan-tutup" class="hidden py-10">
+            <div id="pesan-tutup" class="hidden py-10 text-center">
                 <i class="fas fa-door-closed text-5xl text-red-500 mb-4"></i>
                 <h4 class="text-2xl font-black italic text-white uppercase">MAAF, RENTAL SEDANG TUTUP</h4>
             </div>
@@ -53,7 +50,7 @@
             <div id="legenda-unit" class="mt-12 flex flex-wrap justify-center gap-6 text-[10px] font-black tracking-widest uppercase">
                 <div class="flex items-center gap-2"><span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span> READY</div>
                 <div class="flex items-center gap-2"><span class="w-3 h-3 bg-orange-500 rounded-full"></span> BOOKED</div>
-                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600 rounded-full"></span> MABAR</div>
+                <div class="flex items-center gap-2"><span class="w-3 h-3 bg-red-600 rounded-full"></span> FULL / LOSS</div>
             </div>
         </div>
     </section>
@@ -61,106 +58,47 @@
     <section id="ps" class="py-20 px-6 max-w-5xl mx-auto">
         <h3 class="text-3xl font-black text-center mb-12 italic text-blue-500 uppercase tracking-widest">BATTLE STATION</h3>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition transform hover:-translate-y-2">
-                <div class="flex justify-between items-center mb-6">
-                    <i class="fas fa-crown text-4xl text-yellow-500"></i>
-                    <span class="bg-blue-600 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Premium Unit</span>
-                </div>
+            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-blue-500">
                 <h4 class="text-2xl font-bold mb-4">Unit TV Besar</h4>
-                <ul class="text-gray-400 mb-8 space-y-4 text-sm">
-                    <li class="flex items-center gap-3"><i class="fas fa-tv text-blue-500"></i> Layar Lebar & Resolusi Jernih</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-wifi text-blue-500"></i> Stik Wireless (Bebas Bergerak)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-500"></i> Tempat Luas & Nyaman</li>
+                <ul class="text-gray-400 mb-8 space-y-2 text-sm">
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Layar Lebar & Resolusi Jernih</li>
+                    <li><i class="fas fa-check text-blue-500 mr-2"></i> Stik Wireless</li>
                 </ul>
-                <div class="pt-6 border-t border-gray-700 text-center">
-                    <p class="text-4xl font-black text-white italic">Rp 5.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
-                </div>
+                <p class="text-4xl font-black text-white italic text-center">Rp 5.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
             </div>
-            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-gray-500 hover:shadow-[0_0_30px_rgba(156,163,175,0.2)] transition transform hover:-translate-y-2">
-                <div class="flex justify-between items-center mb-6">
-                    <i class="fas fa-gamepad text-4xl text-gray-400"></i>
-                    <span class="bg-gray-600 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Basic Unit</span>
-                </div>
+            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-gray-500">
                 <h4 class="text-2xl font-bold mb-4">Unit TV Kecil</h4>
-                <ul class="text-gray-400 mb-8 space-y-4 text-sm">
-                    <li class="flex items-center gap-3"><i class="fas fa-tv text-gray-500"></i> Layar Standar (Fokus Gameplay)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-plug text-gray-500"></i> Stik Kabel (Anti Delay)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gray-500"></i> Respon Cepat & Stabil</li>
+                <ul class="text-gray-400 mb-8 space-y-2 text-sm">
+                    <li><i class="fas fa-check text-gray-500 mr-2"></i> Layar Standar</li>
+                    <li><i class="fas fa-check text-gray-500 mr-2"></i> Stik Kabel (Anti Delay)</li>
                 </ul>
-                <div class="pt-6 border-t border-gray-700 text-center">
-                    <p class="text-4xl font-black text-white italic">Rp 4.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
-                </div>
+                <p class="text-4xl font-black text-white italic text-center">Rp 4.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
             </div>
         </div>
     </section>
 
-    <section id="tournament" class="py-16 px-6 bg-black border-y border-gray-800 text-center">
+    <section id="tournament" class="py-16 px-6 bg-black text-center">
         <h3 class="text-3xl font-black italic text-yellow-500 mb-2 uppercase tracking-widest">PES TOURNAMENT</h3>
-        <p class="text-gray-500 font-bold uppercase tracking-[0.2em] text-xs mb-10">Win The Match, Take The Glory</p>
-        <div class="bg-gray-900 border border-blue-500/30 p-8 rounded-3xl inline-block w-full max-w-2xl shadow-2xl">
-            <div class="flex flex-col md:flex-row justify-around gap-8 mb-8">
-                <div class="text-center group">
-                    <i class="fas fa-trophy text-4xl text-yellow-500 mb-3 block group-hover:scale-110 transition"></i>
-                    <span class="font-black text-xl uppercase italic">TROPHY EXCLUSIVE</span>
-                </div>
-                <div class="text-center group">
-                    <i class="fas fa-money-bill-wave text-green-500 text-4xl mb-3 block group-hover:scale-110 transition"></i>
-                    <span class="font-black text-xl uppercase italic">FRESH CASH</span>
-                </div>
-            </div>
-            <a href="https://wa.me/6285859780006" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black uppercase hover:bg-yellow-500 transition">Daftar Sekarang</a>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-20 px-6 bg-gray-950">
-        <div class="max-w-6xl mx-auto">
-            <h3 class="text-center text-xl font-black mb-12 text-gray-400 uppercase tracking-[0.4em]">Dokumentasi Event</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                <img src="IMG-20260415-WA0066.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-                <img src="IMG-20260415-WA0070.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-                <img src="IMG-20260415-WA0072.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-                <img src="IMG-20260415-WA0065.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-            </div>
-        </div>
+        <p class="text-white font-bold mb-6">HADIAH: TROPHY EXCLUSIVE & FRESH CASH</p>
+        <a href="https://wa.me/6285859780006" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black uppercase">Daftar Sekarang</a>
     </section>
 
     <section id="coffee" class="py-20 bg-white text-black rounded-t-[40px]">
-        <div class="max-w-2xl mx-auto px-10">
-            <h3 class="text-3xl font-black text-center mb-10 uppercase italic border-b-4 border-yellow-500 inline-block w-full">Warrior Coffee Bar</h3>
-            <div class="space-y-4 font-bold uppercase italic text-lg">
-                <div class="flex justify-between border-b border-gray-100 pb-2"><span>Kopi Hitam</span><span>5K</span></div>
-                <div class="flex justify-between border-b border-gray-100 pb-2"><span>Es Teh Manis</span><span>4K</span></div>
-                <div class="flex justify-between border-b border-gray-100 pb-2"><span>Kopi Susu</span><span>7K</span></div>
-                <div class="flex justify-between border-b border-gray-100 pb-2"><span>Indomie </span><span>5K</span></div>
+        <div class="max-w-2xl mx-auto px-10 text-center">
+            <h3 class="text-3xl font-black mb-10 uppercase italic border-b-4 border-yellow-500 inline-block">Warrior Coffee Bar</h3>
+            <div class="space-y-4 font-bold uppercase italic text-left">
+                <div class="flex justify-between border-b pb-2"><span>Kopi Hitam</span><span>5K</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Es Teh Manis</span><span>4K</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Kopi Susu</span><span>7K</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Indomie</span><span>5K</span></div>
             </div>
         </div>
     </section>
 
     <footer class="bg-gray-900 pt-24 pb-12 text-center border-t border-white/5 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h4 class="text-2xl font-black text-yellow-500 mb-4 uppercase italic tracking-tighter">Warrior PS Jombang</h4>
-            <p class="text-gray-400 text-sm mb-12 max-w-md mx-auto">Rental PlayStation terbaik di Jombang dengan fasilitas lengkap dan harga terjangkau. Rasakan sensasi bermain seperti seorang ksatria.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-16 text-left border-y border-white/5 py-12">
-                <div>
-                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Alamat Kami</h5>
-                    <p class="text-xs text-gray-500 leading-relaxed">Ceweng Gang 4, Kec. Diwek, Kabupaten Jombang, Jawa Timur</p>
-                </div>
-                <div>
-                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Jam Operasional</h5>
-                    <p class="text-xs text-gray-500 leading-relaxed">Senin - Minggu<br>09:00 WIB - Selesai</p>
-                </div>
-                <div>
-                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Kontak</h5>
-                    <p class="text-xs text-gray-500 leading-relaxed">WhatsApp: 0858-5978-0006<br>Email: warriorps@jombang.com</p>
-                </div>
-            </div>
-
-            <p class="text-[9px] text-gray-600 font-bold uppercase tracking-[0.2em] mb-4">
-                Developed by <span class="text-blue-500">M. Khoirul Fahmi</span>
-            </p>
-            <p class="text-[8px] text-gray-800 uppercase tracking-[0.6em] italic font-black">© 2026 Warrior PS Jombang. All Rights Reserved.</p>
-        </div>
+        <h4 class="text-2xl font-black text-yellow-500 mb-4 uppercase italic">Warrior PS Jombang</h4>
+        <p class="text-gray-500 text-xs mb-8">Ceweng Gang 4, Kec. Diwek, Jombang</p>
+        <p class="text-[9px] text-gray-600 font-bold uppercase tracking-[0.2em]">Developed by <span class="text-blue-500">M. Khoirul Fahmi</span></p>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -173,16 +111,15 @@
         firebase.initializeApp(config);
         const db = firebase.database();
 
-        // Fitur Open/Close Customer
+        // 1. Fitur Open/Close
         db.ref('status_rental').on('value', (s) => {
             const status = s.val();
             document.getElementById('unit-grid').style.display = status === 'open' ? 'grid' : 'none';
             document.getElementById('legenda-unit').style.display = status === 'open' ? 'flex' : 'none';
             document.getElementById('pesan-tutup').style.display = status === 'open' ? 'none' : 'block';
-            document.getElementById('sub-title-unit').innerText = status === 'open' ? 'Cek ketersediaan meja secara real-time' : 'Owner sedang istirahat';
         });
 
-        // Render Unit Status
+        // 2. Render Unit
         const units = [
             { id: 1, type: "Besar" }, { id: 2, type: "Besar" }, { id: 3, type: "Kecil" },
             { id: 4, type: "Kecil" }, { id: 5, type: "Kecil" }, { id: 6, type: "Besar" },
@@ -194,25 +131,48 @@
             const card = document.createElement('div');
             card.id = `unit-card-${u.id}`;
             card.className = "bg-gray-800/30 border border-white/5 p-4 rounded-2xl text-center";
-            card.innerHTML = `<p class="text-[9px] font-bold text-gray-500 uppercase mb-1">UNIT ${u.id}</p><h4 class="text-lg font-black italic gaming-font">${u.type}</h4><p id="status-text-${u.id}" class="text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest border border-white/5 italic text-gray-400">LOADING</p>`;
+            card.innerHTML = `<p class="text-[9px] font-bold text-gray-500 uppercase">UNIT ${u.id}</p><h4 class="text-lg font-black italic gaming-font">${u.type}</h4><p id="status-text-${u.id}" class="text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest border border-white/5 italic">LOADING</p>`;
             document.getElementById('unit-grid').appendChild(card);
 
             db.ref('warrior_status/unit_' + u.id).on('value', (sn) => {
                 const d = sn.val();
                 const st = (d && d.status) ? d.status.toLowerCase() : 'ready';
+                const endTime = d ? d.endTime : null;
                 const cEl = document.getElementById(`unit-card-${u.id}`);
                 const tEl = document.getElementById(`status-text-${u.id}`);
-                tEl.innerText = st.toUpperCase();
-                if (st === 'ready') {
-                    cEl.className = "bg-green-500/5 border border-green-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-green-500 text-white shadow-lg";
-                } else if (st === 'booked') {
-                    cEl.className = "bg-orange-500/5 border border-orange-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-orange-500 text-white shadow-lg";
-                } else {
-                    cEl.className = "bg-red-500/5 border border-red-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-red-600 text-white shadow-lg";
+
+                function update() {
+                    if (st === 'ready') {
+                        cEl.className = "bg-green-500/5 border border-green-500/20 p-4 rounded-2xl text-center";
+                        tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-green-500 text-white";
+                        tEl.innerText = "READY";
+                    } else if (st === 'booked') {
+                        cEl.className = "bg-orange-500/5 border border-orange-500/20 p-4 rounded-2xl text-center";
+                        tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-orange-500 text-white";
+                        tEl.innerText = "BOOKED";
+                    } else if (st === 'full') {
+                        cEl.className = "bg-red-500/5 border border-red-500/20 p-4 rounded-2xl text-center";
+                        tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-red-600 text-white";
+                        
+                        if (endTime) {
+                            const diff = endTime - new Date().getTime();
+                            if (diff > 0) {
+                                const h = Math.floor(diff / 3600000);
+                                const m = Math.floor((diff % 3600000) / 60000);
+                                tEl.innerText = `FULL - ${h > 0 ? h + 'J ' : ''}${m}M`;
+                                if (diff < 600000) tEl.classList.add('animate-pulse', 'bg-yellow-500'); 
+                            } else {
+                                tEl.innerText = "WAKTU HABIS";
+                                tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-gray-600 text-white";
+                            }
+                        } else {
+                            tEl.innerText = "LOSS"; // JIKA BUKAN TIMER, MAKA TULIS LOSS
+                        }
+                    }
                 }
+                update();
+                if (window['int'+u.id]) clearInterval(window['int'+u.id]);
+                if (st === 'full' && endTime) window['int'+u.id] = setInterval(update, 10000);
             });
         });
     </script>
