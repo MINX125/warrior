@@ -7,16 +7,17 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Plus+Jakarta+Sans:wght@400;700;800&display=swap');
         .gaming-font { font-family: 'Orbitron', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #0b0f1a; color: white; }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-sans scroll-smooth">
+<body class="scroll-smooth">
 
     <nav class="flex justify-between items-center p-6 bg-gray-800 sticky top-0 z-50 shadow-lg border-b border-blue-900/30">
         <h1 class="text-2xl font-bold tracking-tighter text-blue-500">WARRIOR<span class="text-yellow-500">PS</span></h1>
         <div class="hidden md:flex space-x-6 text-sm font-bold uppercase tracking-wider">
-            <a href="#status-unit" class="hover:text-blue-400 transition text-blue-400 text-shadow">Unit Status</a>
+            <a href="#status-unit" class="hover:text-blue-400 transition text-blue-400">Unit Status</a>
             <a href="#ps" class="hover:text-blue-400 transition">Rental</a>
             <a href="#tournament" class="text-yellow-500 hover:text-yellow-400 transition">Tournament</a>
             <a href="#gallery" class="hover:text-blue-400 transition">Galeri</a>
@@ -27,16 +28,11 @@
         </a>
     </nav>
 
-    <header class="min-h-[50vh] flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4 relative overflow-hidden">
-        <div class="relative z-10">
-            <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">PLAY LIKE A <span class="text-blue-500">WARRIOR.</span></h2>
-            <p class="text-gray-400 text-lg max-w-2xl mb-8 mx-auto font-medium tracking-tight">Rental PS Harga Rakyat, Fasilitas Ningrat. Ceweng Gang 4, Jombang.</p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#status-unit" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-sm hover:bg-blue-500 transition shadow-lg">CEK UNIT</a>
-                <div class="bg-gray-800 border border-gray-700 px-6 py-3 rounded-xl text-sm font-bold flex items-center">
-                    <i class="fas fa-map-marker-alt mr-2 text-yellow-500"></i>Ceweng Gang 4, Jombang
-                </div>
-            </div>
+    <header class="min-h-[50vh] flex flex-col justify-center items-center text-center bg-gradient-to-b from-gray-800 to-gray-900 px-4 relative">
+        <h2 class="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tighter italic">PLAY LIKE A <span class="text-blue-500">WARRIOR.</span></h2>
+        <p class="text-gray-400 text-lg max-w-2xl mb-8 mx-auto font-medium">Rental PS Harga Rakyat, Fasilitas Ningrat. Ceweng Gang 4, Jombang.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#status-unit" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-black text-sm hover:bg-blue-500 transition shadow-lg">CEK UNIT</a>
         </div>
     </header>
 
@@ -44,7 +40,7 @@
         <div class="max-w-5xl mx-auto text-center">
             <div class="mb-12">
                 <h3 class="text-3xl font-black italic text-blue-500 gaming-font uppercase tracking-widest">LIVE UNIT STATUS</h3>
-                <p id="sub-title-unit" class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-2">Cek ketersediaan meja secara real-time</p>
+                <p id="sub-title-unit" class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em] mt-2 italic">Real-time Management System</p>
             </div>
 
             <div id="pesan-tutup" class="hidden py-10">
@@ -65,35 +61,73 @@
     <section id="ps" class="py-20 px-6 max-w-5xl mx-auto">
         <h3 class="text-3xl font-black text-center mb-12 italic text-blue-500 uppercase tracking-widest">BATTLE STATION</h3>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-blue-500">
-                <h4 class="text-2xl font-bold mb-4 italic">Unit TV Besar</h4>
-                <p class="text-4xl font-black text-white italic">Rp 5.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
+            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition transform hover:-translate-y-2">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fas fa-crown text-4xl text-yellow-500"></i>
+                    <span class="bg-blue-600 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Premium Unit</span>
+                </div>
+                <h4 class="text-2xl font-bold mb-4">Unit TV Besar</h4>
+                <ul class="text-gray-400 mb-8 space-y-4 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-tv text-blue-500"></i> Layar Lebar & Resolusi Jernih</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-wifi text-blue-500"></i> Stik Wireless (Bebas Bergerak)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-blue-500"></i> Tempat Luas & Nyaman</li>
+                </ul>
+                <div class="pt-6 border-t border-gray-700 text-center">
+                    <p class="text-4xl font-black text-white italic">Rp 5.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
+                </div>
             </div>
-            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-gray-500">
-                <h4 class="text-2xl font-bold mb-4 italic">Unit TV Kecil</h4>
-                <p class="text-4xl font-black text-white italic">Rp 4.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
+            <div class="bg-gray-800 p-8 rounded-3xl border-t-4 border-gray-500 hover:shadow-[0_0_30px_rgba(156,163,175,0.2)] transition transform hover:-translate-y-2">
+                <div class="flex justify-between items-center mb-6">
+                    <i class="fas fa-gamepad text-4xl text-gray-400"></i>
+                    <span class="bg-gray-600 text-[10px] px-3 py-1 rounded-full font-bold uppercase">Basic Unit</span>
+                </div>
+                <h4 class="text-2xl font-bold mb-4">Unit TV Kecil</h4>
+                <ul class="text-gray-400 mb-8 space-y-4 text-sm">
+                    <li class="flex items-center gap-3"><i class="fas fa-tv text-gray-500"></i> Layar Standar (Fokus Gameplay)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-plug text-gray-500"></i> Stik Kabel (Anti Delay)</li>
+                    <li class="flex items-center gap-3"><i class="fas fa-check-circle text-gray-500"></i> Respon Cepat & Stabil</li>
+                </ul>
+                <div class="pt-6 border-t border-gray-700 text-center">
+                    <p class="text-4xl font-black text-white italic">Rp 4.000 <span class="text-sm text-gray-500 font-normal">/ Jam</span></p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="tournament" class="py-16 px-6 bg-black text-center">
+    <section id="tournament" class="py-16 px-6 bg-black border-y border-gray-800 text-center">
         <h3 class="text-3xl font-black italic text-yellow-500 mb-2 uppercase tracking-widest">PES TOURNAMENT</h3>
-        <a href="https://wa.me/6285859780006" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black uppercase mt-6 inline-block">Daftar Sekarang</a>
+        <p class="text-gray-500 font-bold uppercase tracking-[0.2em] text-xs mb-10">Win The Match, Take The Glory</p>
+        <div class="bg-gray-900 border border-blue-500/30 p-8 rounded-3xl inline-block w-full max-w-2xl shadow-2xl">
+            <div class="flex flex-col md:flex-row justify-around gap-8 mb-8">
+                <div class="text-center group">
+                    <i class="fas fa-trophy text-4xl text-yellow-500 mb-3 block group-hover:scale-110 transition"></i>
+                    <span class="font-black text-xl uppercase italic">TROPHY EXCLUSIVE</span>
+                </div>
+                <div class="text-center group">
+                    <i class="fas fa-money-bill-wave text-green-500 text-4xl mb-3 block group-hover:scale-110 transition"></i>
+                    <span class="font-black text-xl uppercase italic">FRESH CASH</span>
+                </div>
+            </div>
+            <a href="https://wa.me/6285859780006" target="_blank" class="bg-white text-black px-10 py-3 rounded-full font-black uppercase hover:bg-yellow-500 transition">Daftar Sekarang</a>
+        </div>
     </section>
 
     <section id="gallery" class="py-20 px-6 bg-gray-950">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            <img src="IMG-20260415-WA0066.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-            <img src="IMG-20260415-WA0070.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-            <img src="IMG-20260415-WA0072.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
-            <img src="IMG-20260415-WA0065.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-center text-xl font-black mb-12 text-gray-400 uppercase tracking-[0.4em]">Dokumentasi Event</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <img src="IMG-20260415-WA0066.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
+                <img src="IMG-20260415-WA0070.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
+                <img src="IMG-20260415-WA0072.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
+                <img src="IMG-20260415-WA0065.jpg" class="rounded-2xl border border-gray-800 w-full aspect-video object-cover">
+            </div>
         </div>
     </section>
 
     <section id="coffee" class="py-20 bg-white text-black rounded-t-[40px]">
         <div class="max-w-2xl mx-auto px-10">
             <h3 class="text-3xl font-black text-center mb-10 uppercase italic border-b-4 border-yellow-500 inline-block w-full">Warrior Coffee Bar</h3>
-            <div class="space-y-4 font-bold uppercase italic">
+            <div class="space-y-4 font-bold uppercase italic text-lg">
                 <div class="flex justify-between border-b border-gray-100 pb-2"><span>Kopi Hitam</span><span>5K</span></div>
                 <div class="flex justify-between border-b border-gray-100 pb-2"><span>Es Teh Manis</span><span>4K</span></div>
                 <div class="flex justify-between border-b border-gray-100 pb-2"><span>Kopi Susu</span><span>7K</span></div>
@@ -102,9 +136,31 @@
         </div>
     </section>
 
-    <footer class="bg-gray-900 py-16 text-center border-t border-gray-800">
-        <p class="text-yellow-500 font-black italic uppercase">Warrior PS Jombang</p>
-        <p class="text-[9px] text-gray-600 font-bold uppercase mt-4">Developed by <span class="text-blue-500">M. Khoirul Fahmi</span></p>
+    <footer class="bg-gray-900 pt-24 pb-12 text-center border-t border-white/5 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h4 class="text-2xl font-black text-yellow-500 mb-4 uppercase italic tracking-tighter">Warrior PS Jombang</h4>
+            <p class="text-gray-400 text-sm mb-12 max-w-md mx-auto">Rental PlayStation terbaik di Jombang dengan fasilitas lengkap dan harga terjangkau. Rasakan sensasi bermain seperti seorang ksatria.</p>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-16 text-left border-y border-white/5 py-12">
+                <div>
+                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Alamat Kami</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">Ceweng Gang 4, Kec. Diwek, Kabupaten Jombang, Jawa Timur</p>
+                </div>
+                <div>
+                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Jam Operasional</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">Senin - Minggu<br>09:00 WIB - Selesai</p>
+                </div>
+                <div>
+                    <h5 class="text-blue-500 font-bold uppercase text-[10px] tracking-widest mb-4 italic">Kontak</h5>
+                    <p class="text-xs text-gray-500 leading-relaxed">WhatsApp: 0858-5978-0006<br>Email: warriorps@jombang.com</p>
+                </div>
+            </div>
+
+            <p class="text-[9px] text-gray-600 font-bold uppercase tracking-[0.2em] mb-4">
+                Developed by <span class="text-blue-500">M. Khoirul Fahmi</span>
+            </p>
+            <p class="text-[8px] text-gray-800 uppercase tracking-[0.6em] italic font-black">© 2026 Warrior PS Jombang. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
@@ -126,6 +182,7 @@
             document.getElementById('sub-title-unit').innerText = status === 'open' ? 'Cek ketersediaan meja secara real-time' : 'Owner sedang istirahat';
         });
 
+        // Render Unit Status
         const units = [
             { id: 1, type: "Besar" }, { id: 2, type: "Besar" }, { id: 3, type: "Kecil" },
             { id: 4, type: "Kecil" }, { id: 5, type: "Kecil" }, { id: 6, type: "Besar" },
@@ -137,7 +194,7 @@
             const card = document.createElement('div');
             card.id = `unit-card-${u.id}`;
             card.className = "bg-gray-800/30 border border-white/5 p-4 rounded-2xl text-center";
-            card.innerHTML = `<p class="text-[9px] font-bold text-gray-500 uppercase">UNIT ${u.id}</p><h4 class="text-lg font-black italic gaming-font">${u.type}</h4><p id="status-text-${u.id}" class="text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest border border-white/5 italic text-gray-400">LOADING</p>`;
+            card.innerHTML = `<p class="text-[9px] font-bold text-gray-500 uppercase mb-1">UNIT ${u.id}</p><h4 class="text-lg font-black italic gaming-font">${u.type}</h4><p id="status-text-${u.id}" class="text-[8px] font-black mt-3 py-1 rounded-lg uppercase tracking-widest border border-white/5 italic text-gray-400">LOADING</p>`;
             document.getElementById('unit-grid').appendChild(card);
 
             db.ref('warrior_status/unit_' + u.id).on('value', (sn) => {
@@ -148,13 +205,13 @@
                 tEl.innerText = st.toUpperCase();
                 if (st === 'ready') {
                     cEl.className = "bg-green-500/5 border border-green-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-green-500 text-white";
+                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-green-500 text-white shadow-lg";
                 } else if (st === 'booked') {
                     cEl.className = "bg-orange-500/5 border border-orange-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-orange-500 text-white";
+                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-orange-500 text-white shadow-lg";
                 } else {
                     cEl.className = "bg-red-500/5 border border-red-500/20 p-4 rounded-2xl text-center";
-                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-red-600 text-white";
+                    tEl.className = "text-[8px] font-black mt-3 py-1 rounded-lg uppercase bg-red-600 text-white shadow-lg";
                 }
             });
         });
